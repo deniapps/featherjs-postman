@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "ca44eb50-029e-460f-8764-8c5d88e987e6",
+		"name": "FeathersJS Demo API calls",
+		"description": "A collection of API calls for the FeathersJS chat guide at https://docs.feathersjs.com/guides/chat/readme.html",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"feathers@example.com\",\n  \"password\": \"secret\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3030/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"users"
+					]
+				},
+				"description": "For https://docs.feathersjs.com/guides/chat/authentication.html"
+			},
+			"response": []
+		},
+		{
+			"name": "2. Creating a token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"strategy\": \"local\",\n\t\"email\": \"feathers@example.com\",\n\t\"password\": \"secret\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3030/authentication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"authentication"
+					]
+				},
+				"description": "For https://docs.feathersjs.com/guides/chat/authentication.html"
+			},
+			"response": []
+		},
+		{
+			"name": "3. Create a todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Postman\",\n\t\"text\": \"Hello from Postman\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3030/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"messages"
+					]
+				},
+				"description": "For https://docs.feathersjs.com/guides/chat/service.html"
+			},
+			"response": []
+		},
+		{
+			"name": "4. List all todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3030/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"messages"
+					]
+				},
+				"description": "For https://docs.feathersjs.com/guides/chat/service.html"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
